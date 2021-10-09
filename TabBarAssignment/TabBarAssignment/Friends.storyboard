@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kUK-I6-Kd6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friends View Controller-->
+        <scene sceneID="QSZ-an-uV9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOO-3k-cwQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="FriendsViewController" id="PO1-uw-qg8" customClass="FriendsViewController" customModule="TabBarAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="FriendsViewController" id="g0E-Yb-WKE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEU-v3-gT7">
+                                <rect key="frame" x="114" y="511" width="201" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="To Friends Details"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="efT-Zg-dQr"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iF8-R7-D08"/>
+                    <connections>
+                        <outlet property="friendsDetail" destination="fEU-v3-gT7" id="Lga-1R-A6R"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1214.4927536231885" y="187.5"/>
+        </scene>
+        <!--Friends Detail View Controller-->
+        <scene sceneID="TCM-zo-D0C">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1C-e5-x0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="FriendsDetailViewController" id="Vd0-cg-fa6" customClass="FriendsDetailViewController" customModule="TabBarAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qlg-bh-rTa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k5l-eF-vog"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1967" y="200"/>
+        </scene>
+        <!--Firends-->
+        <scene sceneID="Qeu-ct-vJw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9f-9B-CCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kUK-I6-Kd6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Firends" image="friends" id="kwo-q7-SPN"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bL9-9h-znB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PO1-uw-qg8" kind="relationship" relationship="rootViewController" id="nsd-pI-jmg"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="305.79710144927537" y="187.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="friends" width="12.5" height="12.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
