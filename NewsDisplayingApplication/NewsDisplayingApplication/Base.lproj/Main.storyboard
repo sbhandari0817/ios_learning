@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cEj-f1-THl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News List Table View Controller-->
+        <scene sceneID="xKW-Te-EhZ">
+            <objects>
+                <tableViewController id="Rep-i0-edw" customClass="NewsListTableViewController" customModule="NewsDisplayingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FG0-KM-9sd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="105" id="fSN-uh-geP" customClass="ArticleTableViewCell" customModule="NewsDisplayingApplication" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fSN-uh-geP" id="oW3-gc-GF4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ab8-a2-nd5">
+                                            <rect key="frame" x="0.0" y="5" width="414" height="95"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-2d-qGa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMk-Ju-uxQ">
+                                                    <rect key="frame" x="0.0" y="79" width="414" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Ab8-a2-nd5" secondAttribute="trailing" id="KGI-Yy-f45"/>
+                                        <constraint firstItem="Ab8-a2-nd5" firstAttribute="top" secondItem="oW3-gc-GF4" secondAttribute="top" constant="5" id="hnK-TU-0EM"/>
+                                        <constraint firstItem="Ab8-a2-nd5" firstAttribute="leading" secondItem="oW3-gc-GF4" secondAttribute="leading" id="jUT-4i-J7e"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ab8-a2-nd5" secondAttribute="bottom" constant="5" id="k6v-ZB-0Jj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsDescription" destination="vMk-Ju-uxQ" id="PZh-Mq-1QA"/>
+                                    <outlet property="newsTitle" destination="Ctg-2d-qGa" id="WT8-kr-RrN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rep-i0-edw" id="u4B-XL-uTe"/>
+                            <outlet property="delegate" destination="Rep-i0-edw" id="gdK-nN-oAC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="zaR-lc-OoH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXG-h3-lCy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205.7971014492755" y="65.625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7ea-pd-kgf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cEj-f1-THl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1v5-SO-a4o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rep-i0-edw" kind="relationship" relationship="rootViewController" id="tP8-dk-yhu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9df-Ii-zoe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295.6521739130435" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
